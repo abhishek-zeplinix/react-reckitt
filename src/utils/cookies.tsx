@@ -7,7 +7,7 @@ const options = {
 };
 
 const isTokenValid = (userToken: string) => {
-    console.log('10',userToken)
+    console.log('10', userToken);
     if (!userToken) return false;
     const decoded = jwtDecode(userToken);
     if (decoded && decoded.exp) {
@@ -46,7 +46,7 @@ const setAuthData = (token: string, refreshToken: string, userDetails: any) => {
 };
 
 const setUserDetails = (userDetails: any) => {
-    console.log('20',userDetails)
+    console.log('20', userDetails);
     const domain: string = getDomain();
     const option: any = {
         path: '/',
@@ -83,19 +83,11 @@ const removeAuthData = () => {
     };
 
     if (domain.indexOf('localhost') == -1) {
-        option.domain = `reckittserver.${domain}`;
+        option.domain = `reckittservernew.${domain}`;
     }
     Cookies.remove('authToken', option);
     Cookies.remove('authRefreshToken', option);
     Cookies.remove('userDetails', option);
 };
 
-export {
-    isTokenValid,
-    setAuthData,
-    setUserDetails,
-    getAuthToken,
-    getRefreshToken,
-    getUserDetails,
-    removeAuthData
-};
+export { isTokenValid, setAuthData, setUserDetails, getAuthToken, getRefreshToken, getUserDetails, removeAuthData };
