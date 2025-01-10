@@ -1,4 +1,3 @@
-
 import React, { useContext, useRef, useState, useEffect } from 'react';
 import { Button } from 'primereact/button';
 import { get } from 'lodash';
@@ -286,7 +285,6 @@ const ManageSupplierPage = () => {
     };
 
     const handleSubmit = () => {
-        console;
         onNewAdd(form);
     };
 
