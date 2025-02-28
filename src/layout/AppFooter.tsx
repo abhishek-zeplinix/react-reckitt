@@ -7,7 +7,7 @@ const AppFooter = () => {
 
     return (
         <div className="layout-footer">
-            <span className="font-medium ml-2">RECKITT</span>{' ©'+moment().format('YYYY')}
+            <span className="font-medium ml-2">BOHOHR</span>{' ©'+moment().format('YYYY')}
         </div>
     );
 };

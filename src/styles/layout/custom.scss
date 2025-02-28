@@ -481,10 +481,14 @@ $spacing-sizes: (
 .custom-menu-item {
   i {
     color: var(--navIcon-Color) ;
+    padding-left: 0.25rem !important;
+    justify-content: space-between !important;
   }
 
   span {
     color:#6c757d;
+    font-size: 1rem !important;
+    font-weight: bold !important;
   }
 }
 

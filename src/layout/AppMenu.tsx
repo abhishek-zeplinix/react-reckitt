@@ -752,8 +752,8 @@ const AppMenu = () => {
                 </Link>
             )}
 
-            <div className="min-h-screen flex relative lg:static">
-                <div id="app-sidebar-2" className="h-screen block flex-shrink-0 absolute lg:static left-0 top-0 z-1 select-none" style={{ width: !layoutState.isMobile && layoutState.staticMenuDesktopInactive ? 60 : 265 }}>
+            <div className="min-h-screen flex relative sm:static">
+                <div id="app-sidebar-2" className="h-screen block flex-shrink-0 absolute sm:static left-0 top-0 z-1 select-none" style={{ width: !layoutState.isMobile && layoutState.staticMenuDesktopInactive ? 30 : 265 }}>
                     <div className="flex flex-column" style={{ height: '92%' }}>
                         <div
                             className="overflow-y-auto "
@@ -762,7 +762,7 @@ const AppMenu = () => {
                                 scrollbarColor: 'transparent transparent'
                             }}
                         >
-                            <ul className="list-none p-3 m-0">
+                            <ul className="list-none p-2 m-0 font-bold">
                                 {get(model, '0.items', []).map((item, i) => {
                                     return !item?.seperator ? <AppMenuitem item={item} root={true} index={i} key={`AppMenuitem${i}${item.label}`} /> : <li key={`AppMenuitem${i}${item.label}`} className="menu-separator"></li>;
                                 })}
@@ -774,7 +774,7 @@ const AppMenu = () => {
                                     v-ripple
                                     onClick={onMenuToggle}
                                     className="flex mb-1 justify-content-center align-items-center cursor-pointer p-2 text-700 transition-duration-150 transition-colors p-ripple bg-secondary"
-                                    style={{ width: layoutState.staticMenuDesktopInactive ? 60 : 250, height: '20px' }}
+                                    style={{ width: layoutState.staticMenuDesktopInactive ? 30 : 250, height: '20px' }}
                                 >
                                     <i className={iconClass}></i>
                                 </a>
